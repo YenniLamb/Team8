@@ -30,5 +30,8 @@ def test_login(new_user):
 def test_new_task(new_task):
     assert new_task.nameTitle != None
     
-
+# Pytest 4 
+# testing the task 'Studying Finals' is not a complete task
+def test_complete(new_task):
+    assert new_task.complete == False
 
