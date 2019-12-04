@@ -11,7 +11,7 @@ def new_user():
 
 @pytest.fixture(scope = 'module')
 def new_task():
-    task = Post(nameTitle=' Studying Finals', user_id = '1', complete = False )
+    task = Post(nameTitle=' Studying Finals', content= " Finals include : COMPE 131 and CS 146 ", complete = False, author = 'current_user._get_current_object()' )
     return task
 
 # Pytest 1
@@ -35,3 +35,11 @@ def test_new_task(new_task):
 def test_complete(new_task):
     assert new_task.complete == False
 
+# Pytest 5
+# testing content is not empty
+def test_content(new_task):
+    assert new_task.content != None
+    
+
+
+    
