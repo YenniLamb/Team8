@@ -41,5 +41,3 @@ def db(app_context):
     yield db
 
     db.drop_all()
-    #os.unlink(TESTDB_PATH)
-#Not sure what this is but it causes pytest issues
