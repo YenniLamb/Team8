@@ -25,4 +25,7 @@ def test_new_user(new_user):
 def test_login(new_user):
     assert new_user.is_authenticated == True
   
-
+# Pytest 3
+# testing the note's model when it is not empty
+def test_new_note(new_note):
+    assert new_note.nameTitle != None
